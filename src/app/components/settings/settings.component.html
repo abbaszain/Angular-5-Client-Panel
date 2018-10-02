@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <a routerLink="/" class="btn btn-link">
+        <i class="fa fa-arrow-circle-o-left"></i>Back To Dashboard</a>
+    </div>
+    <div class="col-md-6">
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-10">
+      <div class="card">
+        <div class="card-header">
+          <h5>Settings</h5>
+        </div>
+        <div class="card-body">
+          <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <label>Allow Registration</label>
+              <input type="checkbox" name="allowRegistration" (change)="settings.showRegister= !settings.showRegister" [checked]="settings.showRegister">
+            </div>
+            <div class="form-group">
+              <label>Deny from adding the Balance</label>
+              <input type="checkbox" name="disableBalanceOnAdd" [checked]="settings.hideBalOnAdd" (change)="settings.hideBalOnAdd=!settings.hideBalOnAdd">
+            </div>
+            <div class="form-group">
+              <label>Allow to edit the balance</label>
+              <input type="checkbox" name="editBalance" [checked]="settings.showBalOnEdit" (change)="settings.showBalOnEdit= !settings.showBalOnEdit">
+            </div>
+            <div class="form-group">
+              <input type="submit" name="submit" value="Submit" class="btn btn-block btn-primary">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
